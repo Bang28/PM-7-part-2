@@ -10,6 +10,8 @@ import java.util.*
 private const val TAG = "CrimeListViewModel"
 
 class CrimeListViewModel : ViewModel() {
+    private val crimeRepository = CrimeRepository.get()
+
     val crimes = mutableListOf<Crime>()
     init {
         Log.d(TAG, "init starting")
@@ -42,5 +44,6 @@ class CrimeListViewModel : ViewModel() {
             result += crime
         }
         return result
+        return crimeRepository.getCrimes()
     }
 }
