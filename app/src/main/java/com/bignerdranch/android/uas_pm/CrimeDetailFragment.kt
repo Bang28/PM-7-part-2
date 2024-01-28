@@ -41,9 +41,14 @@ class CrimeDetailFragment : Fragment() {
             crimeTitle.doOnTextChanged { text, _, _, _ ->
                 crime = crime.copy(title = text.toString())
             }
+
             crimeDate.apply {
                 text = crime.date.toString()
                 isEnabled = false
+            }
+
+            crimeSolved.setOnCheckedChangeListener { _, isChecked ->
+                crime = crime.copy(isSolved = isChecked)
             }
         }
     }
