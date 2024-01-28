@@ -16,6 +16,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
 private const val TAG = "CrimeListFragment"
+
 class CrimeListFragment : Fragment() {
 
     private var _binding: FragmentCrimeListBinding? = null
