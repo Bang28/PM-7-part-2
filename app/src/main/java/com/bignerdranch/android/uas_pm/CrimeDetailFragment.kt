@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import com.bignerdranch.android.uas_pm.databinding.FragmentCrimeDetailBinding
 import java.util.*
@@ -32,5 +33,14 @@ class CrimeDetailFragment : Fragment() {
             FragmentCrimeDetailBinding.inflate(layoutInflater, container,
                 false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.apply {
+            crimeTitle.doOnTextChanged { text, _, _, _ ->
+                crime = crime.copy(title = text.toString())
+            }
+        }
     }
 }
