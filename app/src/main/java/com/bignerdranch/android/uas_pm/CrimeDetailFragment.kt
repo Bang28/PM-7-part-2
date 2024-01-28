@@ -1,4 +1,6 @@
 package com.bignerdranch.android.uas_pm
 
-class CrimeDetailFragment {
+import androidx.fragment.app.Fragment
+
+class CrimeDetailFragment : Fragment() {
 }
