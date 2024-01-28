@@ -31,6 +31,7 @@ class CrimeListAdapter(
             binding.crimeTitle.text = crime.title
             binding.crimeDate.text = crime.date.toString()
         }
+        holder.bind(crime)
     }
     override fun getItemCount() = crimes.size
 }
