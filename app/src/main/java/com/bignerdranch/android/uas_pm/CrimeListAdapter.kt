@@ -8,6 +8,10 @@ import com.bignerdranch.android.uas_pm.databinding.ListItemCrimeBinding
 class CrimeHolder(
     val binding: ListItemCrimeBinding
 ) : RecyclerView.ViewHolder(binding.root) {
+    fun bind(crime: Crime) {
+        binding.crimeTitle.text = crime.title
+        binding.crimeDate.text = crime.date.toString()
+    }
 }
 
 class CrimeListAdapter(
