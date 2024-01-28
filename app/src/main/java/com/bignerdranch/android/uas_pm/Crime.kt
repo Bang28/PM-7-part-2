@@ -1,4 +1,10 @@
 package com.bignerdranch.android.uas_pm
 
-class Crime {
-}
+import java.util.*
+
+data class Crime(
+    val id: UUID,
+    val title: String,
+    val date: Date,
+    val isSolved: Boolean
+)
