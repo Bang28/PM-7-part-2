@@ -10,7 +10,7 @@ import java.util.*
 @Dao
 interface CrimeDao {
     @Query("SELECT * FROM crime")
-    suspend fun getCrimes(): Flow<List<Crime>>
+    suspend fun getCrimes(): List<Crime>
 
     @Query("SELECT * FROM crime WHERE id=(:id)")
     suspend fun getCrime(id: UUID): Crime
